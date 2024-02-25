@@ -1,0 +1,22 @@
+@startuml
+[dnsmasq]
+[NFS]
+component TuringPiv1 {
+  port lan
+  component nodeN {
+    port serialN
+    port lanN
+  }
+  component node1 {
+    port serial1
+    port lan1
+  }
+  component node0 {
+    port serial0
+    port lan0
+  }
+}
+
+lan0 -u-> lan
+lan -u-> dnsmasq
+@enduml
